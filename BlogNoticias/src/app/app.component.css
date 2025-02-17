@@ -1,0 +1,23 @@
+header {
+color: rgb(71, 211, 71);
+background-color: rgb(221, 238, 221);
+padding: 20px;
+text-align: center;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 1.5rem;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+main aside {
+    width: 100%;     
+    border: 1px solid red;
+}
+
+main .content {
+    width: 100%;
+    border: 1px solid red;
+}
