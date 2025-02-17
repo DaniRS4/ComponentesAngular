@@ -8,11 +8,11 @@
 .noticias .flex article {
 
     width: 100%;
-    border: 1px solid black;
     padding: 10px;
     display: flex;
     align-items: center;
     gap: 10px;
+    background-color: rgb(241, 245, 241);
 }
 figure {
     max-width: 30%;
