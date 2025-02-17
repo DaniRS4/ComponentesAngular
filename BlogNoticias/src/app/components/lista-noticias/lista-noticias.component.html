@@ -1,1 +1,21 @@
-<p>lista-noticias works!</p>
+<div class="noticias">
+    <div class="flex">
+        <!--    Me gustaría trackear con un ID pero no quería incluirlo en el array porque en el Criterio 4 de la rúbrica especifica que hay que seguir el interfaz de datos -->
+        @for(noticia of misNoticias; track noticia.titleNoticia){
+
+            <article>
+                <figure>
+                    <img src="{{noticia.imageNoticia}}" alt="{{noticia.titleNoticia}}">
+                </figure>
+                <div class="cuerpo-noticia">
+                    <h3>{{noticia.titleNoticia}}</h3>
+                    <p>{{noticia.textNoticia}}</p>
+                    <p>{{noticia.dateNoticia}}</p>
+                </div>
+            </article>
+
+        }
+        
+        
+    </div>
+</div>

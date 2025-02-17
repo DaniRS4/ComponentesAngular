@@ -14,10 +14,14 @@ main {
 
 main aside {
     width: 100%;     
-    border: 1px solid red;
 }
 
 main .content {
     width: 100%;
-    border: 1px solid red;
+}
+
+@media(max-width: 800px) {
+    main {
+        flex-direction: column;
+    }
 }
