@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { INoticia } from '../../interfaces/inoticia.interface';
 
@@ -10,6 +10,42 @@ import { INoticia } from '../../interfaces/inoticia.interface';
 })
 export class FormularioComponent {
 
-  newNoticia: INoticia = { titleNoticia: '', dateNoticia: '', imageNoticia: '', textNoticia: '' }
+  newNoticia: INoticia = { titleNoticia: '', dateNoticia: '', imageNoticia: '', textNoticia: '' };
+  @Output() sendNoticia: EventEmitter<INoticia> = new EventEmitter();
 
+  getNoticia() {
+    console.log(this.newNoticia)
+    // quiero enviarlo al padre
+    this.sendNoticia.emit(this.newNoticia);
+    this.newNoticia = { titleNoticia: '', dateNoticia: '', imageNoticia: '', textNoticia: '' };
+  }
+
+  validar(){
+    if (!this.newNoticia.titleNoticia || this.newNoticia.titleNoticia.trim() === '') {
+        alert("Introduce un título para la noticia.");
+
+    } else if (!this.newNoticia.textNoticia || this.newNoticia.textNoticia.trim() === '') {
+      alert("Introduce contenido para la noticia.");
+
+    }  else if(!this.newNoticia.dateNoticia || this.newNoticia.dateNoticia.trim() === '') {
+      alert("Introduce la fecha de la noticia.");
+
+    }  else if(!this.newNoticia.imageNoticia || this.newNoticia.imageNoticia.trim() === '') {
+      alert("Introduce una imagen.");
+    } else {
+        this.getNoticia();
+    }
+  }
+
+
+  CapturarImagen(event: any) {
+    const file = event.target.files[0]; // Obtiene el archivo seleccionado
+    if (file) {
+        const reader = new FileReader();
+        reader.readAsDataURL(file); // Convierte la imagen a Base64
+        reader.onload = () => {
+            this.newNoticia.imageNoticia = reader.result as string; // Guarda la imagen en formato Base64
+        };
+    }
+}
 }

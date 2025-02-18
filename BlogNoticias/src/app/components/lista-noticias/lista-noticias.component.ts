@@ -10,7 +10,8 @@ import { INoticia } from '../../interfaces/inoticia.interface';
 export class ListaNoticiasComponent {
   @Input() misNoticias: INoticia[] = []
 
-  ngOnInit(){
+  ngOnChanges(){
+    
     console.log(this.misNoticias)
   }
 }
