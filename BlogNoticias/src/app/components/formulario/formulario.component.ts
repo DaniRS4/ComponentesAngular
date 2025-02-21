@@ -37,14 +37,15 @@ export class FormularioComponent {
     }
   }
 
-
+  
   CapturarImagen(event: any) {
-    const file = event.target.files[0]; // Obtiene el archivo seleccionado
+    console.log(event);
+    const file = event.target.files[0]; 
     if (file) {
         const reader = new FileReader();
-        reader.readAsDataURL(file); // Convierte la imagen a Base64
+        reader.readAsDataURL(file); 
         reader.onload = () => {
-            this.newNoticia.imageNoticia = reader.result as string; // Guarda la imagen en formato Base64
+            this.newNoticia.imageNoticia = reader.result as string; 
         };
     }
 }
