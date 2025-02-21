@@ -47,7 +47,7 @@
 
 
 
-@media (max-width: 2000px) {
+@media (max-width: 1000px) {
     .noticias .flex article {
         flex-direction: column;
         gap:0;
