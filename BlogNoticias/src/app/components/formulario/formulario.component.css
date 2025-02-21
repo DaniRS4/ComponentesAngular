@@ -1,0 +1,35 @@
+
+.form {
+    
+    padding: 1.2rem;
+}
+
+.form h2 {
+    text-align: center;
+    text-decoration:underline
+}
+
+.form div{
+    margin-bottom: 20px;
+    
+}
+
+
+.form input{
+    display: block;
+    padding: 10px;
+    width: 90%;
+}
+
+button {
+
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover{
+        background-color: #1b68b9;
+    }
+}

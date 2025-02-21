@@ -1,0 +1,21 @@
+
+<div class="form">
+    <h2>Inserción de Noticia</h2>
+    <div>
+        
+        <input id="titleNoticia" type="text" placeholder="Introduce el Título de la Noticia" [(ngModel)]="newNoticia.titleNoticia">
+    </div>
+    <div>
+        
+        <input id="textNoticia" type="text" placeholder="Introduce el contenido de la Noticia" [(ngModel)]="newNoticia.textNoticia">
+    </div>
+    <div>
+        
+        <input id="dateNoticia" type="date" placeholder="Introduce la fecha de la Noticia" [(ngModel)]="newNoticia.dateNoticia">
+    </div>
+    <div>
+        
+        <input id="imageNoticia" type="file" placeholder="Introduce la imagen de la Noticia" [(ngModel)]="newNoticia.imageNoticia" (change)="CapturarImagen($event)" accept="image/*">
+    </div>
+    <button (click) = "validar()">Guardar</button>
+</div>

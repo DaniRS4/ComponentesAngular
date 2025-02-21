@@ -1,0 +1,28 @@
+header {
+color: rgb(61, 102, 61);
+background-color: rgb(221, 238, 221);
+padding: 20px;
+text-align: center;
+font-size: 1.5rem;
+border-radius: 15%;
+border: 10px solid rgb(29, 84, 187);
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+main aside {
+    width: 100%;     
+}
+
+main .content {
+    width: 100%;
+}
+
+@media(max-width: 800px) {
+    main {
+        flex-direction: column;
+    }
+}
