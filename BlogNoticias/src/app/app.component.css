@@ -1,11 +1,12 @@
 header {
 color: rgb(61, 102, 61);
 background-color: rgb(221, 238, 221);
-padding: 20px;
+padding: 5px;
 text-align: center;
 font-size: 1.5rem;
 border-radius: 15%;
-border: 10px solid rgb(29, 84, 187);
+border: 6px solid rgb(29, 84, 187);
+box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
 main {
@@ -25,4 +26,16 @@ main .content {
     main {
         flex-direction: column;
     }
+}
+
+
+footer {
+    background:  rgb(221, 238, 221);
+    border: 6px solid rgb(29, 84, 187);
+    color: rgb(61, 102, 61);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 0 -6px 10px rgba(0, 0, 0, 0.3);
 }
